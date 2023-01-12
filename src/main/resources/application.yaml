@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/gifnoc
+    username:
+    password:
+  jpa:
+    show-sql: true
+
+logging:
+  file:
+    name: ./logs/latest.log
+  logback:
+    rollingpolicy:
+      clean-history-on-start: true
+
+gifnoc:
+  jwt:
+    header: Authorization
+    expire: 86400
+    secret: $TOY CONFIGURATION CENTER-RETNEC NOITARUGIFNOC YOT$
+  cache:
+    default-expire: 60
